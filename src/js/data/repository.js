@@ -66,6 +66,6 @@ export const library = {
   },
 };
 
-export const imageUrl = (file) => config.paths.signImages + file;
+export const imageUrl = (file) => `${config.paths.signImages}${file}?v=${config.assetVersion}`;
 export const letterUrl = (letter) => `${config.paths.letterImages}${letter === "ñ" ? "enie" : letter}.webp`;
 export const pdfUrl = (printedPage) => `${config.paths.dictionaryPdf}#page=${printedPage + config.pdfPageOffset}`;
