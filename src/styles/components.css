@@ -39,9 +39,10 @@
 }
 .sign-figure img {
   position: absolute; inset: 6% 6% 0; width: 88%; height: 94%; object-fit: contain; object-position: bottom;
-  opacity: 0; transition: opacity 0.45s ease;
+  opacity: 0;   /* sin fundido cruzado: dos posturas encimadas se ven como una imagen doble */
 }
-.sign-figure img.is-active { opacity: 1; }
+.sign-figure img.is-active { opacity: 1; animation: frame-in 0.28s var(--ease); }
+@keyframes frame-in { from { opacity: 0.35; transform: scale(0.985); } }
 .sign-figure .frame-dots { position: absolute; left: 0; right: 0; bottom: 8px; display: flex; justify-content: center; gap: 6px; }
 .sign-figure .frame-dots span { width: 8px; height: 8px; border-radius: 50%; background: rgb(24 36 74 / 0.25); transition: background 0.3s, transform 0.3s; }
 .sign-figure .frame-dots span.is-active { background: var(--red); transform: scale(1.3); }

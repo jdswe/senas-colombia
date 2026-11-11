@@ -18,6 +18,6 @@ export const config = {
   /** Página del PDF = página impresa + este desfase. */
   pdfPageOffset: 52,
   /** Milisegundos que dura cada fotograma de una seña. */
-  frameMs: 950,
+  frameMs: 1100,
   storageKey: "senas-colombia:v1",
 };
