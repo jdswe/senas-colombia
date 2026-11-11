@@ -14,7 +14,7 @@ export const config = {
     dictionaryPdf: "recursos/Diccionario-lengua-de-senas.pdf",
   },
   /** Súbelo cada vez que reemplaces imágenes: obliga al navegador a descargar las nuevas. */
-  assetVersion: "2",
+  assetVersion: "3",
   /** Página del PDF = página impresa + este desfase. */
   pdfPageOffset: 52,
   /** Milisegundos que dura cada fotograma de una seña. */
