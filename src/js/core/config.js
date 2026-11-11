@@ -10,6 +10,7 @@ export const config = {
     customSigns: "data/custom-signs.json",
     modules: "data/modules.json",
     version: "data/version.json",
+    imageOverrides: "data/image-overrides.json",
     signImages: "data/img/signs/",
     letterImages: "data/img/alphabet/",
     dictionaryPdf: "recursos/Diccionario-lengua-de-senas.pdf",

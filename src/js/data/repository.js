@@ -26,11 +26,12 @@ function aliases(word) {
 }
 
 export async function loadLibrary() {
-  const [signs, custom, modules, version] = await Promise.all([
+  const [signs, custom, modules, version, imageOverrides] = await Promise.all([
     getJson(config.paths.signs),
     getJson(config.paths.customSigns, []),
     getJson(config.paths.modules),
     getJson(config.paths.version, { images: 0 }),
+    getJson(config.paths.imageOverrides, {}),
   ]);
   state.imageVersion = version.images;
   // El PDF de referencia es opcional: no se distribuye con el sitio publicado.
@@ -38,6 +39,8 @@ export async function loadLibrary() {
   state.signs = [...signs, ...custom];
   state.modules = modules;
   for (const sign of state.signs) {
+    // Fotogramas definidos a mano (más posturas que las del diccionario): sobreviven a tools/build_data.py.
+    if (imageOverrides[sign.id]) sign.images = imageOverrides[sign.id];
     state.byId.set(sign.id, sign);
     if (!state.byModule.has(sign.module)) state.byModule.set(sign.module, []);
     state.byModule.get(sign.module).push(sign);

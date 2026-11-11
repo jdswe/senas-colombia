@@ -9,7 +9,6 @@ buenas-noches-2.webp
 buenas-tardes-1.webp
 buenas-tardes-2.webp
 buenos-dias-1.webp
-buenos-dias-2.webp
 cada-uno-1.webp
 casa-1.webp
 como-1.webp
