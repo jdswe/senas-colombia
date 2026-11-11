@@ -47,7 +47,7 @@ tools/                  Scripts que regeneran data/ a partir del PDF
 - **Nuevo módulo:** añade `{ "id", "name", "group", "page", "count" }` a `data/modules.json`.
 - **Mejor traducción:** amplía las tablas de `src/js/translator/lexicon.js`.
 - **Nueva pantalla:** crea `src/js/views/mi-vista.js` y regístrala con `route()` en `main.js`.
-- **Cambiar ilustraciones:** reemplaza los archivos de `data/img/signs/` conservando los nombres.
+- **Cambiar ilustraciones:** reemplaza los archivos de `data/img/signs/` conservando los nombres y sube el número de `data/version.json`.
 
 ## Antes de publicar
 

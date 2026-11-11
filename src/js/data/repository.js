@@ -7,11 +7,11 @@ import { normalize } from "../text/normalize.js";
  * Para ampliar la biblioteca agrega entradas en data/custom-signs.json
  * (mismo formato) y, si hace falta, un módulo nuevo en data/modules.json.
  */
-const state = { signs: [], modules: [], byId: new Map(), byModule: new Map(), phrases: new Map(), hasPdf: false };
+const state = { signs: [], modules: [], byId: new Map(), byModule: new Map(), phrases: new Map(), hasPdf: false, imageVersion: 0 };
 
 async function getJson(url, fallback) {
   try {
-    const response = await fetch(url);
+    const response = await fetch(url, { cache: "no-cache" });   // siempre revalida: los datos cambian a menudo
     if (!response.ok) throw new Error(`${response.status} ${url}`);
     return await response.json();
   } catch (error) {
@@ -26,11 +26,13 @@ function aliases(word) {
 }
 
 export async function loadLibrary() {
-  const [signs, custom, modules] = await Promise.all([
+  const [signs, custom, modules, version] = await Promise.all([
     getJson(config.paths.signs),
     getJson(config.paths.customSigns, []),
     getJson(config.paths.modules),
+    getJson(config.paths.version, { images: 0 }),
   ]);
+  state.imageVersion = version.images;
   // El PDF de referencia es opcional: no se distribuye con el sitio publicado.
   state.hasPdf = await fetch(config.paths.dictionaryPdf, { method: "HEAD" }).then((r) => r.ok, () => false);
   state.signs = [...signs, ...custom];
@@ -66,6 +68,7 @@ export const library = {
   },
 };
 
-export const imageUrl = (file) => `${config.paths.signImages}${file}?v=${config.assetVersion}`;
+/** La versión viene de data/version.json: súbela al reemplazar imágenes para saltar la caché del navegador. */
+export const imageUrl = (file) => `${config.paths.signImages}${file}?v=${state.imageVersion}`;
 export const letterUrl = (letter) => `${config.paths.letterImages}${letter === "ñ" ? "enie" : letter}.webp`;
 export const pdfUrl = (printedPage) => `${config.paths.dictionaryPdf}#page=${printedPage + config.pdfPageOffset}`;
