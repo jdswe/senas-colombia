@@ -1,0 +1,275 @@
+[
+ {
+  "id": "ser-humano",
+  "name": "Personas y pronombres",
+  "group": "La persona",
+  "page": 5,
+  "count": 27
+ },
+ {
+  "id": "cuerpo-humano",
+  "name": "Cuerpo humano",
+  "group": "La persona",
+  "page": 17,
+  "count": 34
+ },
+ {
+  "id": "fisiologia",
+  "name": "Fisiología",
+  "group": "La persona",
+  "page": 31,
+  "count": 29
+ },
+ {
+  "id": "frutas-verduras",
+  "name": "Frutas y verduras",
+  "group": "La persona",
+  "page": 43,
+  "count": 30
+ },
+ {
+  "id": "comidas-bebidas",
+  "name": "Comidas y bebidas",
+  "group": "La persona",
+  "page": 57,
+  "count": 48
+ },
+ {
+  "id": "vestuario",
+  "name": "Vestuario",
+  "group": "La persona",
+  "page": 79,
+  "count": 33
+ },
+ {
+  "id": "aseo-personal",
+  "name": "Aseo personal",
+  "group": "La persona",
+  "page": 95,
+  "count": 18
+ },
+ {
+  "id": "salud",
+  "name": "Salud",
+  "group": "La persona",
+  "page": 103,
+  "count": 26
+ },
+ {
+  "id": "inteligencia",
+  "name": "Inteligencia",
+  "group": "La persona",
+  "page": 115,
+  "count": 20
+ },
+ {
+  "id": "espacio",
+  "name": "Espacio",
+  "group": "La persona",
+  "page": 125,
+  "count": 14
+ },
+ {
+  "id": "dias-semana",
+  "name": "Días de la semana",
+  "group": "La persona",
+  "page": 131,
+  "count": 7
+ },
+ {
+  "id": "meses",
+  "name": "Meses del año",
+  "group": "La persona",
+  "page": 135,
+  "count": 12
+ },
+ {
+  "id": "tiempo",
+  "name": "Expresiones de tiempo",
+  "group": "La persona",
+  "page": 141,
+  "count": 33
+ },
+ {
+  "id": "numeros",
+  "name": "Números",
+  "group": "La persona",
+  "page": 155,
+  "count": 24
+ },
+ {
+  "id": "cantidad",
+  "name": "Expresiones de cantidad",
+  "group": "La persona",
+  "page": 165,
+  "count": 5
+ },
+ {
+  "id": "sentimientos",
+  "name": "Características y sentimientos",
+  "group": "La persona",
+  "page": 169,
+  "count": 78
+ },
+ {
+  "id": "familia",
+  "name": "Familia y relaciones",
+  "group": "Sociedad",
+  "page": 205,
+  "count": 28
+ },
+ {
+  "id": "profesiones",
+  "name": "Profesiones y oficios",
+  "group": "Sociedad",
+  "page": 219,
+  "count": 46
+ },
+ {
+  "id": "acciones",
+  "name": "Acciones y distracciones",
+  "group": "Sociedad",
+  "page": 239,
+  "count": 82
+ },
+ {
+  "id": "deportes",
+  "name": "Deportes",
+  "group": "Sociedad",
+  "page": 271,
+  "count": 26
+ },
+ {
+  "id": "ciudad",
+  "name": "Ciudad",
+  "group": "Sociedad",
+  "page": 283,
+  "count": 49
+ },
+ {
+  "id": "transporte",
+  "name": "Transporte",
+  "group": "Sociedad",
+  "page": 307,
+  "count": 29
+ },
+ {
+  "id": "tecnologia",
+  "name": "Tecnología",
+  "group": "Sociedad",
+  "page": 319,
+  "count": 16
+ },
+ {
+  "id": "hogar",
+  "name": "Hogar y vivienda",
+  "group": "Sociedad",
+  "page": 327,
+  "count": 84
+ },
+ {
+  "id": "gobierno-comercio",
+  "name": "Gobierno y comercio",
+  "group": "Sociedad",
+  "page": 369,
+  "count": 62
+ },
+ {
+  "id": "educacion",
+  "name": "Entorno educativo",
+  "group": "Sociedad",
+  "page": 395,
+  "count": 46
+ },
+ {
+  "id": "utiles-escolares",
+  "name": "Útiles escolares",
+  "group": "Sociedad",
+  "page": 415,
+  "count": 17
+ },
+ {
+  "id": "religion",
+  "name": "Religión",
+  "group": "Sociedad",
+  "page": 425,
+  "count": 20
+ },
+ {
+  "id": "sanciones-vicios",
+  "name": "Sanciones sociales y vicios",
+  "group": "Sociedad",
+  "page": 433,
+  "count": 15
+ },
+ {
+  "id": "comunicacion",
+  "name": "Comunicación",
+  "group": "Sociedad",
+  "page": 443,
+  "count": 40
+ },
+ {
+  "id": "cultura-sorda",
+  "name": "Cultura sorda",
+  "group": "Sociedad",
+  "page": 463,
+  "count": 20
+ },
+ {
+  "id": "calificar",
+  "name": "Calificar",
+  "group": "Sociedad",
+  "page": 473,
+  "count": 15
+ },
+ {
+  "id": "interrogar",
+  "name": "Preguntas",
+  "group": "Sociedad",
+  "page": 479,
+  "count": 14
+ },
+ {
+  "id": "cortesia",
+  "name": "Fórmulas de cortesía",
+  "group": "Sociedad",
+  "page": 485,
+  "count": 16
+ },
+ {
+  "id": "naturaleza",
+  "name": "Naturaleza",
+  "group": "Entorno natural",
+  "page": 495,
+  "count": 21
+ },
+ {
+  "id": "animales",
+  "name": "Animales",
+  "group": "Entorno natural",
+  "page": 505,
+  "count": 38
+ },
+ {
+  "id": "geografia",
+  "name": "Geografía",
+  "group": "Entorno natural",
+  "page": 523,
+  "count": 19
+ },
+ {
+  "id": "cualidades",
+  "name": "Cualidades de objetos",
+  "group": "Entorno natural",
+  "page": 531,
+  "count": 27
+ },
+ {
+  "id": "colores",
+  "name": "Colores",
+  "group": "Entorno natural",
+  "page": 543,
+  "count": 11
+ }
+]

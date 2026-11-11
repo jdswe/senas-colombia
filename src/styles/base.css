@@ -1,0 +1,109 @@
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 1.02rem;
+  line-height: 1.6;
+}
+
+/* Fondo: tres franjas de la bandera como cintas suaves + trama de rombos de mochila. */
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(60rem 28rem at 8% -6%, rgb(252 209 22 / 0.38), transparent 62%),
+    radial-gradient(46rem 26rem at 100% 4%, rgb(30 92 176 / 0.20), transparent 60%),
+    radial-gradient(40rem 24rem at 60% 108%, rgb(206 17 38 / 0.12), transparent 60%),
+    var(--canvas);
+}
+.backdrop::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.05;
+  background-image:
+    linear-gradient(45deg, var(--ink) 12%, transparent 12%, transparent 88%, var(--ink) 88%),
+    linear-gradient(-45deg, var(--ink) 12%, transparent 12%, transparent 88%, var(--ink) 88%);
+  background-size: 44px 44px;
+  mask-image: linear-gradient(180deg, #000, transparent 70%);
+}
+
+h1, h2, h3 { line-height: 1.15; margin: 0 0 0.5em; letter-spacing: -0.01em; }
+h1 { font-size: clamp(2.1rem, 5vw, 3.6rem); font-weight: 800; }
+h2 { font-size: clamp(1.5rem, 3vw, 2.1rem); font-weight: 800; }
+h3 { font-size: 1.15rem; font-weight: 700; }
+p { margin: 0 0 1em; }
+a { color: var(--accent); text-underline-offset: 0.18em; }
+img { max-width: 100%; display: block; }
+button, input, select, textarea { font: inherit; color: inherit; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; border-radius: 6px; }
+
+.skip-link {
+  position: absolute; top: 0.6rem; left: 0.6rem; z-index: 20;
+  padding: 0.6rem 1rem; border-radius: var(--radius-sm);
+  background: var(--ink); color: var(--canvas); font-weight: 700;
+  transform: translateY(-200%);
+}
+.skip-link:focus { transform: none; }
+
+.site-header {
+  width: min(var(--page), 100% - 2rem);
+  margin-inline: auto;
+  padding: 0.9rem 0;
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+}
+.brand { display: inline-flex; align-items: center; gap: 0.7rem; color: var(--ink); text-decoration: none; }
+.brand-mark { width: 46px; height: 46px; border-radius: 13px; box-shadow: var(--shadow); transition: transform 0.4s var(--ease); }
+.brand:hover .brand-mark { transform: rotate(-12deg) scale(1.06); }
+.brand-copy { display: grid; line-height: 1.15; }
+.brand-copy span { font-size: 0.8rem; color: var(--muted); }
+
+.main-nav { display: flex; gap: 0.25rem; overflow-x: auto; max-width: 100%; padding: 0.2rem; }
+.main-nav a {
+  padding: 0.5rem 0.85rem; border-radius: 999px; white-space: nowrap;
+  color: var(--ink); text-decoration: none; font-weight: 650;
+  transition: background 0.2s, color 0.2s;
+}
+.main-nav a:hover { background: var(--surface-2); }
+.main-nav a[aria-current="page"] { background: var(--ink); color: var(--canvas); }
+
+.mochila-band {
+  height: 12px;
+  background:
+    linear-gradient(135deg, var(--yellow) 25%, transparent 25%) -12px 0 / 24px 12px,
+    linear-gradient(225deg, var(--yellow) 25%, transparent 25%) -12px 0 / 24px 12px,
+    linear-gradient(315deg, var(--blue-deep) 25%, transparent 25%) 0 0 / 24px 12px,
+    linear-gradient(45deg, var(--blue-deep) 25%, transparent 25%) 0 0 / 24px 12px,
+    var(--red);
+}
+
+main { flex: 1; width: min(var(--page), 100% - 2rem); margin-inline: auto; padding: 2rem 0 4rem; }
+main:focus { outline: none; }
+.boot-message { text-align: center; padding: 4rem 1rem; color: var(--muted); }
+
+.site-footer { border-top: 1px solid var(--line); background: var(--surface); }
+.footer-inner {
+  width: min(var(--page), 100% - 2rem); margin-inline: auto; padding: 1.5rem 0;
+  display: flex; flex-wrap: wrap; gap: 1rem 2rem; justify-content: space-between; font-size: 0.92rem;
+}
+.footer-inner p { margin: 0; max-width: 46ch; color: var(--muted); }
+.footer-inner nav { display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; }
+
+/* Entrada de cada vista y aparición escalonada de tarjetas */
+.view { animation: view-in 0.45s var(--ease) both; }
+@keyframes view-in { from { opacity: 0; transform: translateY(14px); } }
+.stagger > * { animation: view-in 0.5s var(--ease) both; animation-delay: calc(var(--i, 0) * 28ms); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-delay: 0s !important; transition-duration: 0.01ms !important; }
+}

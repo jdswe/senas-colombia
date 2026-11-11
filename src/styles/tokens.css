@@ -1,0 +1,49 @@
+/* Identidad: amarillo, azul y rojo de Colombia sobre papel cálido; tinta azul noche. */
+:root {
+  color-scheme: light dark;
+  --yellow: #fcd116;
+  --yellow-soft: #fff1b8;
+  --blue: #1e5cb0;
+  --blue-deep: #003893;
+  --red: #ce1126;
+
+  --canvas: #fff9ec;
+  --surface: #ffffff;
+  --surface-2: #fff3d6;
+  --ink: #18244a;
+  --muted: #54607f;
+  --line: #ead9b4;
+  --accent: var(--blue-deep);
+  --on-accent: #ffffff;
+  --stage: #fff3cf;          /* fondo de las ilustraciones: siempre claro */
+  --stage-disc: #ffd95a;
+  --focus: #b3001b;
+  --ok: #1a7f4b;
+  --bad: #b3001b;
+
+  --radius: 18px;
+  --radius-sm: 10px;
+  --shadow: 0 1px 2px rgb(24 36 74 / 0.06), 0 10px 28px -12px rgb(24 36 74 / 0.25);
+  --shadow-lift: 0 2px 4px rgb(24 36 74 / 0.08), 0 22px 40px -16px rgb(24 36 74 / 0.35);
+  --page: 1180px;
+  --font: ui-rounded, "SF Pro Rounded", "Nunito", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --canvas: #0e1530;
+    --surface: #172046;
+    --surface-2: #1e2a58;
+    --ink: #f4efe2;
+    --muted: #b7bfd9;
+    --line: #2f3c70;
+    --accent: #ffd84a;
+    --on-accent: #18244a;
+    --focus: #ffd84a;
+    --ok: #5fd69a;
+    --bad: #ff8a94;
+    --shadow: 0 1px 2px rgb(0 0 0 / 0.3), 0 10px 28px -12px rgb(0 0 0 / 0.6);
+    --shadow-lift: 0 2px 4px rgb(0 0 0 / 0.3), 0 22px 40px -16px rgb(0 0 0 / 0.7);
+  }
+}

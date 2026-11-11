@@ -1,0 +1,80 @@
+/* Botones */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  min-height: 44px; padding: 0.6rem 1.15rem; border-radius: 999px; border: 2px solid transparent;
+  font-weight: 750; text-decoration: none; cursor: pointer;
+  transition: transform 0.2s var(--ease), box-shadow 0.2s, background 0.2s;
+}
+.btn:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+.btn:active { transform: translateY(0); }
+.btn-primary { background: var(--accent); color: var(--on-accent); }
+.btn-sun { background: var(--yellow); color: #18244a; }
+.btn-ghost { background: var(--surface); color: var(--ink); border-color: var(--line); }
+.btn[disabled] { opacity: 0.5; cursor: not-allowed; transform: none; box-shadow: none; }
+.btn-icon { padding: 0.5rem; width: 44px; }
+
+.eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; margin: 0 0 0.6rem;
+  font-size: 0.8rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.eyebrow::before { content: ""; width: 22px; height: 8px; border-radius: 4px;
+  background: linear-gradient(90deg, var(--yellow) 50%, var(--blue-deep) 50% 75%, var(--red) 75%); }
+
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
+.note { padding: 0.9rem 1.1rem; border-radius: var(--radius-sm); background: var(--surface-2);
+  border-left: 5px solid var(--yellow); font-size: 0.94rem; }
+.note p:last-child { margin: 0; }
+.chip { display: inline-flex; align-items: center; padding: 0.2rem 0.7rem; border-radius: 999px;
+  background: var(--surface-2); border: 1px solid var(--line); font-size: 0.82rem; font-weight: 650; }
+.muted { color: var(--muted); }
+.page-head { margin-bottom: 1.8rem; max-width: 62ch; }
+.back-link { display: inline-block; margin-bottom: 1rem; font-weight: 650; }
+
+/* Ilustración de una seña: escenario claro + fotogramas que se alternan */
+.sign-figure {
+  position: relative; aspect-ratio: 1; border-radius: var(--radius); overflow: hidden;
+  background: var(--stage); isolation: isolate;
+}
+.sign-figure::before {
+  content: ""; position: absolute; inset: 12% 12% 4%; border-radius: 50%; z-index: -1;
+  background: var(--stage-disc); opacity: 0.75;
+}
+.sign-figure img {
+  position: absolute; inset: 6% 6% 0; width: 88%; height: 94%; object-fit: contain; object-position: bottom;
+  opacity: 0; transition: opacity 0.45s ease;
+}
+.sign-figure img.is-active { opacity: 1; }
+.sign-figure .frame-dots { position: absolute; left: 0; right: 0; bottom: 8px; display: flex; justify-content: center; gap: 6px; }
+.sign-figure .frame-dots span { width: 8px; height: 8px; border-radius: 50%; background: rgb(24 36 74 / 0.25); transition: background 0.3s, transform 0.3s; }
+.sign-figure .frame-dots span.is-active { background: var(--red); transform: scale(1.3); }
+.sign-figure.is-letter::before { inset: 14%; }
+.sign-figure.is-letter img { inset: 14%; width: 72%; height: 72%; object-position: center; }
+.sign-figure .empty { position: absolute; inset: 0; display: grid; place-items: center; color: #54607f; font-size: 0.85rem; padding: 1rem; text-align: center; }
+
+/* Tarjeta de seña */
+.sign-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(165px, 1fr)); gap: 1rem; list-style: none; margin: 0; padding: 0; }
+.sign-card {
+  display: block; padding: 0.6rem; color: var(--ink); text-decoration: none; height: 100%;
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow);
+  transition: transform 0.25s var(--ease), box-shadow 0.25s;
+}
+.sign-card:hover, .sign-card:focus-visible { transform: translateY(-5px) rotate(-0.4deg); box-shadow: var(--shadow-lift); }
+.sign-card .sign-word { display: block; margin-top: 0.55rem; font-weight: 800; font-size: 0.95rem; overflow-wrap: anywhere; }
+.sign-card .sign-meta { display: flex; justify-content: space-between; gap: 0.4rem; font-size: 0.78rem; color: var(--muted); }
+.sign-card.is-learned .sign-meta::after { content: "✓ aprendida"; color: var(--ok); font-weight: 700; }
+
+/* Barra de progreso */
+.progress { height: 10px; border-radius: 999px; background: var(--surface-2); border: 1px solid var(--line); overflow: hidden; }
+.progress > span { display: block; height: 100%; width: 100%; transform-origin: left;
+  background: linear-gradient(90deg, var(--yellow), var(--blue) 70%, var(--red)); transition: transform 0.6s var(--ease); }
+
+/* Campos */
+.field { display: grid; gap: 0.35rem; font-weight: 700; font-size: 0.92rem; }
+.input, .select, .textarea {
+  width: 100%; min-height: 46px; padding: 0.6rem 0.9rem; border-radius: 14px;
+  border: 2px solid var(--line); background: var(--surface); font-weight: 500;
+}
+.textarea { min-height: 96px; resize: vertical; }
+.input:focus, .select:focus, .textarea:focus { border-color: var(--blue); outline: none; box-shadow: 0 0 0 4px rgb(30 92 176 / 0.2); }
+
+.tabs { display: inline-flex; gap: 0.25rem; padding: 0.3rem; border-radius: 999px; background: var(--surface-2); border: 1px solid var(--line); margin-bottom: 1.4rem; flex-wrap: wrap; }
+.tabs button { border: 0; background: none; padding: 0.55rem 1.1rem; border-radius: 999px; font-weight: 750; cursor: pointer; min-height: 44px; }
+.tabs button[aria-selected="true"] { background: var(--ink); color: var(--canvas); }

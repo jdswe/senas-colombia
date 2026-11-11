@@ -1,0 +1,5 @@
+# Obra de terceros: se usa solo como referencia local, no se redistribuye.
+recursos/*.pdf
+recursos/*.png
+__pycache__/
+.DS_Store

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff7e6">
+    <meta name="description" content="Aprende Lengua de Señas Colombiana por módulos: biblioteca ilustrada, traductor español ↔ señas, alfabeto manual y braille.">
+    <title>Señas Colombia · Aprende LSC</title>
+    <link rel="icon" href="src/assets/logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="src/styles/tokens.css">
+    <link rel="stylesheet" href="src/styles/base.css">
+    <link rel="stylesheet" href="src/styles/components.css">
+    <link rel="stylesheet" href="src/styles/views.css">
+    <script type="module" src="src/js/main.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#app">Saltar al contenido</a>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand" href="#/" aria-label="Señas Colombia, inicio">
+        <img class="brand-mark" src="src/assets/logo.svg" alt="" width="46" height="46">
+        <span class="brand-copy"><strong>Señas Colombia</strong><span>Lengua de Señas Colombiana</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="#/modulos" data-nav="modulos">Módulos</a>
+        <a href="#/biblioteca" data-nav="biblioteca">Biblioteca</a>
+        <a href="#/traductor" data-nav="traductor">Traductor</a>
+        <a href="#/alfabeto" data-nav="alfabeto">Alfabeto</a>
+        <a href="#/braille" data-nav="braille">Braille</a>
+        <a href="#/contexto" data-nav="contexto">Contexto</a>
+      </nav>
+    </header>
+    <div class="mochila-band" aria-hidden="true"></div>
+
+    <main id="app" tabindex="-1">
+      <p class="boot-message">Cargando la biblioteca de señas…</p>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p><strong>Señas Colombia</strong> · Proyecto educativo independiente, no oficial. Aprender una lengua también es reconocer a quienes la hacen vivir.</p>
+        <nav aria-label="Información legal">
+          <a href="#/legal/terminos">Términos de uso</a>
+          <a href="#/legal/privacidad">Privacidad</a>
+          <a href="#/legal/derechos">Derechos de autor y fuentes</a>
+          <a href="#/legal/accesibilidad">Accesibilidad</a>
+        </nav>
+      </div>
+    </footer>
+    <noscript><p class="boot-message">Esta aplicación necesita JavaScript para mostrar las señas.</p></noscript>
+  </body>
+</html>
