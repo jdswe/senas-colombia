@@ -11,4 +11,3 @@ decir-adios-1.webp
 decir-hola-1.webp
 de-nada-1.webp
 por-favor-1.webp
-?? tools/ai/
