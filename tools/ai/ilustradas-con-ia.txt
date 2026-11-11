@@ -1,0 +1,14 @@
+agradecer-decir-gracias-gracias-a-1.webp
+bienvenido-1.webp
+buenas-noches-1.webp
+buenas-noches-2.webp
+buenas-tardes-1.webp
+buenas-tardes-2.webp
+buenos-dias-1.webp
+buenos-dias-2.webp
+casa-1.webp
+decir-adios-1.webp
+decir-hola-1.webp
+de-nada-1.webp
+por-favor-1.webp
+?? tools/ai/
